@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html>
   <head>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -25,14 +25,11 @@
               appEmail: appEmail.trim()
           };
 
-
-          $.post(API_HOST + "/apps", params, function(result){
-              $('#create_key_message').html(result);
+          $.post(API_HOST + "/v1/app", params, function(message){
+              $('#create_key_message').html(message);
               $('#create_key_message').show();
           });
       };
-
-
       </script>
 
       <style type="text/css">
